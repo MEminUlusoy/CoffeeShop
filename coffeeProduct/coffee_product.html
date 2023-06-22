@@ -4,14 +4,314 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="coffee_product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Coffee Product Page</h1>
-    <ul>
-        <li>1.</li>
-        <li>2.</li>
-        <li>3.</li>
-    </ul>
-    
+    <header>
+
+    </header>
+    <main>
+        <div class="product">
+            <div class="product-img">
+                <div class="carousel">
+                    <div class="slider">
+                        <section><img src="https://media.discordapp.net/attachments/1118264347806933093/1118264581400305725/pngaaa.com-1020600.png" alt=""></section>
+                        <section><img src="https://media.discordapp.net/attachments/1118264347806933093/1118632455373598720/pngaaa.com-4107684.png?width=542&height=671" alt=""></section>
+                        <section><img src="https://media.discordapp.net/attachments/1118264347806933093/1118264660144169014/pngaaa.com-1414095.png" alt=""></section>
+                        <section><img src="https://media.discordapp.net/attachments/1118264347806933093/1118264581786185850/pngaaa.com-42595.png?width=718&height=671" alt=""></section> 
+                    </div>
+                    <div class="controls">
+                        <span class="arrow left">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </span>
+                        <span class="arrow right">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                        <ul class="radio-inputs">
+                            <li class="selected">
+                                <img  src="https://media.discordapp.net/attachments/1118264347806933093/1118264581400305725/pngaaa.com-1020600.png" alt="">
+                            </li>
+                            <li>
+                                <img src="https://media.discordapp.net/attachments/1118264347806933093/1118632455373598720/pngaaa.com-4107684.png?width=542&height=671" alt="">                                </li>
+                            <li>
+                                <img src="https://media.discordapp.net/attachments/1118264347806933093/1118264660144169014/pngaaa.com-1414095.png" alt="">
+                            </li>
+                            <li>
+                                <img src="https://media.discordapp.net/attachments/1118264347806933093/1118264581786185850/pngaaa.com-42595.png?width=718&height=671" alt="">
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="product-info">
+                <div class="product-name">
+                    <p class="p-name">Moliendo Amalfi Espresso Blend Kahve</p>
+                </div>
+                <div class="product-inner-info">
+                    <p>Tüm Moliendo Finest Coffee ürünlerini görmek için tıklayınız.</p>
+                    <p>Alttan gelen mandalina tadını hissettiğinizde çekirdeğe olan beğeninizi katlayacak, 
+                        yumuşak içimli dolgun ama pürüzsüz gövdeli, kuruyemiş tatlarına eşlik eden tatlı narenciye asiditesi ile göz dolduran bir lezzet.</p>
+                </div>
+                <div class="product-rate">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="product-price">
+                <div class="product-ads">
+                    <p>Her 500 TL Alışverişinize 100 TL indirim !</p>
+                </div>
+                <div class="product-gr">
+                    <label class="quantity-title">Ürün Gramını Seçiniz</label>
+                    <ul class="radio-inputs-gr">
+                        <li class="radio selected" id="1" class ="selected">
+                          <input type="radio" name="radio" id="1" checked="">
+                          <span  class="name">250 GR</span>
+                        </li>
+                        <li class="radio" id="2">
+                          <input type="radio" id="2" name="radio">
+                          <span id="2" class="name">500 GR</span>
+                        </li> 
+                        <li class="radio" id = "3">
+                          <input type="radio" id="3" name="radio">
+                          <span class="name">1000 GR</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="product-type">
+                    <label for="type-title">Öğütme Tipini Seçiniz</label>
+                    <select name="language" id="language">
+                        <option value="cek">Çekirdek</option>
+                        <option value="fp">French Press</option>
+                        <option value="kf">Kağıt Filtre</option>
+                        <option value="es">Espresso</option>
+                    </select>
+                </div>
+                <div class="product-number">
+                    <label for="quantity-title">Ürün Sayısını Seçiniz</label>
+                    <div class="quantity">
+                        <button class="prev" onclick="prevNum('numbers')">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <button class="next" onclick="nextNum('numbers')" >
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="box">
+                            <input name ="quantity-num" type="button" id="numbers" min="1" maxlength="10" value="1">
+                        </div>
+                      </div>
+                </div>
+                <div class="add-card-btn">
+                    <p class="price" id="price">119.90 TL</p>
+                    <button class="checkout-btn">
+                        <span>Sepete Ekle</span>
+                        <i class="fa-solid fa-cart-shopping" style="margin: 10px;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="description">
+                <div class="description-title">
+                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1118264660882378822/pngaaa.com-1539162.png?width=589&height=671" alt="">
+                    <p>Ürün Bilgisi</p>
+                </div>
+                <div class="description-info">
+                    <p class="article" id="article">Özellikler:
+                        <br>
+                        Çekirdek Tipi: Arabica (Catuai)
+                        <br>
+                        Hasat Zamanı: Ocak - Mart
+                        <br>
+                        İşleme süreci: Yıkanmış
+                        <br>
+                        Tadım Notları: Fındık, Çikolata, Badem, Mandalina
+                        <br>
+                        Aroma (Koku): Kavrulmuş Badem
+                        <br>
+                        Gövde: Orta – Yüksek Gövde
+                        <br>
+                        Yetiştiği İrtifa: 1400-1700m
+                        <br>
+                        Asidite: Orta - Yüksek 
+                    </p> 
+                    <div class="sonuc-div">
+                        <button onclick="gizleGoster('sonuc');">Devamını oku ...</button>
+                         <p id="sonuc" style="display: none;" >
+                             İçim: İlk anda pürüzsüz bir tat ile başlayan yudum bütün ağza yayılıyor, çikolata, fındık ve kavrulmuş badem tatlarına eşlik eden tatlı ve yüksek olmayan bir asidite ve finish’le birlikte ağızda kalan fındık badem tadı ve mandalina ferahlığı.                            <br>
+                             <br>
+                             Honduras Finca Montecristo SHG ve EP sertifikalarına sahip bir kahve. SHG (Strictly High Grown – Kesinlikle Yüksekte Yetişmiş) sertifikası 1350m rakım üstünde yetişen kahveler için verilen bir sertifika. Kahvenin yetiştiği yükseklik arttıkça hem oksijen miktarı azaldığı hem de hava biraz daha serinlediği için kahve çekirdeklerinin büyüme hızı düşüyor. Yavaş büyüyen kirazlar çok daha lezzetli oluyor ve yeni tatların oluşumunu beraberinde getiriyor. EP (European Preparation - Avrupa için Hazırlanmış) ise büyüklük ve kalite olarak Avrupa standartlarına göre ayıklanmış kahvelere verilen bir sertifika. Dolayısıyla bu kahve çekirdekleri hem yüksekte büyüdüler hem de özenle ayıklandılar diyebiliriz.
+                             <br>
+                             Montecristo Çiftliği işi biraz büyüterek kahve dışında işin turizmine de giren çiftliklerden. Son dönemde kahveye olan ilginin artması ve hem kahve ticareti ile uğraşanların hem de kahve severlerin talebinin artması nedeniyle artık büyük çiftlikler misafirhane ve hatta otel inşaa ederek konuklarını burada ağırlıyorlar. Böylece hem muhteşem bir doğada küçük bir tatil yapıyorsunuz hem de kahve ve çiftlik ürünleri hakkında birçok bilgiye sahip oluyorsunuz.  
+                         </p> 
+                     </div>
+                    
+                    </div>
+                </div>
+                <div class="product-comment">
+                    <div class="commend-title">
+                        <p>Yorumlar</p>
+                    </div>
+                    <div class="commend-cards">
+                        <div class="card-commend">
+                            <div class="commend-name">
+                                <p class="c-name">TAM ORAN ☕️</p>
+                            </div>
+                            <div class="commend-inner-info">
+                                <p>Yumuşak dengeli ve kıvamında. Günün her saati içebileceğiniz ve rahatsız etmeyecek bir kahve.</p>
+                                <p>Hasan Erim TOPRAK | 15/03/2023</p>
+                            </div>
+                            <div class="commend-rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                        <div class="card-commend">
+                            <div class="commend-name">
+                                <p class="c-name">Yoğun olmayan gövde, rahat içim</p>
+                            </div>
+                            <div class="commend-inner-info">
+                                <p>başlıkta da belirttiğim gibi gövde orta. kahvaltıdan sonra tercih edilebilir. sert kahve sevenler için ideal değil.</p>
+                                <p>Baran Gündüz | 07/06/2022</p>
+                            </div>
+                            <div class="commend-rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>  
+
+        <div class="recommend-products">
+            <div class="recommend-title">
+                <p> Birlikte iyi gider...</p>
+            </div>
+            <div class="recommend-carousel-container" id="carousel-container">
+                <div class="rec-inner-carousel">
+                    <div class="track">
+                        <div class="product-card-container">
+                            <div class="rec-product">
+                                <div class="img">
+                                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1118264660571996291/pngaaa.com-1524266.png?width=740&height=671" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>Cookie</p>
+                                    <span>159.90 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card-container">
+                            <div class="rec-product">
+                                <div class="img">
+                                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1120756057933881487/pngaaa.com-3316979.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>Makaron</p>
+                                    <span>129.90 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card-container">
+                            <div class="rec-product">
+                                <div class="img">
+                                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1120756060064591962/pngaaa.com-2503137.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>Cookie Tane</p>
+                                    <span>39.90 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card-container">
+                            <div class="rec-product">
+                                <div class="img">
+                                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1118264582889287781/pngaaa.com-153135.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>Lotus kek</p>
+                                    <span>109.90 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card-container">
+                            <div class="rec-product">
+                                <div class="img">
+                                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1118264583308726482/pngaaa.com-153168.png?width=720&height=417" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>Fındıklı Kek</p>
+                                    <span>109.90 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card-container">
+                            <div class="rec-product">
+                                <div class="img">
+                                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1120756058361704528/pngaaa.com-3667443.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>Çilekli Pasta</p>
+                                    <span>159.90 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card-container">
+                            <div class="rec-product">
+                                <div class="img">
+                                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1120756058697244723/pngaaa.com-3667441.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>Karamelli Brownie</p>
+                                    <span>159.90 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card-container">
+                            <div class="rec-product">
+                                <div class="img">
+                                    <img src="https://media.discordapp.net/attachments/1118264347806933093/1120835368166633473/pngaaa.com-3157418.png?width=567&height=671" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>Cheesecake</p>
+                                    <span>119.90 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-controls">
+                    <button class="prevNum">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="nextNum">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <iframe 
+        width="100%"
+        height="1000"
+        frameborder="0"
+        scrolling="no"
+        src="../coffee_footer/coffee_footer.html" frameborder="0" allowfullscreen ></iframe>
+    </footer>
 </body>
+<script src="coffee_product.js"></script>
 </html>
