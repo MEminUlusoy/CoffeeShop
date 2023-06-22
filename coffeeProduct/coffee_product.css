@@ -1,3 +1,636 @@
-body h1{
-    color: blue;
+main{
+    width:100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main .product{
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main .product-img{
+    height: 50vh;
+    width: 50%;
+    margin: 10px auto;
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+}
+main .carousel{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+main .radio-inputs {
+  width: 85%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  user-select: none;
+  position: absolute;
+  margin: 6px;
+
+}
+main .radio-inputs li{
+  width: 90px;
+  height: 70px;
+  display: flex;  
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  margin:5px auto;
+  background-color: #ffffff;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px ;
+}
+main .radio-inputs li.selected{
+  border-color: #025259;
+  box-shadow: 0 2px 2px rgba(80, 106, 179, 0.1), 0 0 0 3px #025259;
+}
+main .radio-inputs li img{
+  width: 80%;
+  height: 80%;
+  object-fit: scale-down;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .slider{
+    height: 40vh;
+    width: 400%;
+    display: flex;
+    transition: all 0.3s;
+}
+main .slider section{
+    width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+main .slider section img{
+  width: 80%;
+  height: 80%;
+  object-fit: scale-down;
+  
+
+}
+main .controls .arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+main .arrow.left {
+    left: 10px;
+
+}
+main .arrow.right {
+    right: 10px;
+}
+
+main .product-info{
+    height: 50vh;
+    width: 20%;
+    margin: 10px auto;
+    font-family: 'League Spartan', sans-serif;
+    overflow: hidden;
+}
+main .product-info .p-name{
+  height: 10vh;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 25px;
+  color: #025259;
+}
+main .product-inner-info{
+  height: 30vh;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 17px;
+  color: black;
+  overflow: hidden;
+}
+main .product-rate .checked{
+   height: 10vh;
+    color: #F29325;
+}
+main .product-rate span{
+  margin-left: 10px;
+}
+main .product-price{
+    height: 50vh;
+    width: 20%;
+    margin: 10px auto;
+    font-family: 'Mukta', sans-serif;
+    overflow: hidden;
+}
+main .product-ads{
+    width: 100%;
+    height: 10vh;
+    background-color:#D94F04;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-family: 'Advent Pro', sans-serif;
+}
+main .product-ads p{
+  margin: 5px ;
+}
+main .product-gr{
+    margin-top: 20px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .product-gr .quantity-title{
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+
+}
+main .radio-inputs-gr {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border: 2px solid #f2f2f2;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgb(245, 245, 245);
+    padding: 0.15rem;
+    width: 98%;
+    height: 38px;
+    font-size: 14px;
+    list-style-type: none;
+  }
+  
+  main .radio-inputs-gr .radio {
+    marker: none;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  main .radio-inputs-gr .radio input {
+    
+    display: none;
+  }
+  
+  main .radio-inputs-gr .radio .name {
+    marker: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    padding: .5rem 0;
+    color: black;
+    transition: all .15s ease-in-out;
+  }
+  
+  main .radio-inputs-gr li.selected{
+    marker: none;
+    border: 0.5px solid #007172;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+main .product-type{
+    margin-top: 20px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Advent Pro', sans-serif;
+}
+main .product-type title{
+  width: 100%;
+  height: 5vh;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .product-type select{
+  margin-top: 10px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1.5px solid #f2f2f2;
+    color:#025259;
+    outline: none;
+    transition: all .15s ease-in-out;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 17px;
+  }
+
+  
+ main .product-type select:focus{
+    outline:none;
+  }
+main .product-number{
+    margin-top: 20px;
+    height: 60px;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  main .product-number .quantity-title{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+main .quantity {
+    width: 99%; 
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    filter: drop-shadow(0px 1px 0px #f2f2f2)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    position: relative;
+    transition: 0.5s;
+  }
+  main .quantity .next {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    padding-bottom: 2px;
+    cursor: pointer;
+    color: #025259;
+  }
+  main .quantity .box {
+    border: none;
+    color: #025259;
+    background-color: transparent;
+  }
+  main .quantity .box input[type="button"]{
+    border: none;
+    color: #025259;
+    background-color: transparent;
+  }
+  
+  main .quantity .prev {
+    
+    color: #025259;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    padding-bottom: 2px;
+    cursor: pointer;
+  }
+
+
+main .add-card-btn{
+    margin-top: 20px;
+    width: 100%;
+    max-height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+main .add-card-btn .price{
+    width: 100%;
+    height: 40px;
+    color: black;
+    font-size: 30px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .add-card-btn .checkout-btn{
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  font-weight: 15px;
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #025259 ;
+  color: #ffffff;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+main .add-card-btn .checkout-btn:hover{
+  background-color:#013a3f;
+}
+  
+main .product-description{
+    width: 77%;
+    height: auto;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    display: grid;
+    
+    grid-template-columns:14fr 12.5fr;
+    grid-template-rows: 1fr;
+    grid-gap: 33px;
+
+}
+main .description{
+  height: 100%;
+  min-height: 40vh;
+  min-width: 53%;
+  border-radius: 10px;
+  border: 2px solid #f2f2f2;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+ main .description-title{
+  margin-left: 20px;
+  width: 10%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  min-width: 250px;
+ }
+ main .description-title p{
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color: #025259;
+  font-size: 20px;
+ }
+ main .description-title img{
+  width: 40px;
+  height: 40px;
+  object-fit: scale-down;
+ }
+ 
+ main .description-info{
+  margin: 13px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+ }
+ main .article {
+  width: 95%;
+  min-width: 50%;
+  height: 25vh;
+}
+main .sonuc-div button{
+
+  background-color: transparent;
+  border: none;
+  color: black;
+  
+}
+main .sonuc-div p{
+  width: 95%;
+  min-width: 50%;
+  font-family: 'League Spartan', sans-serif;
+}
+ main .product-comment{
+  height: 100%;
+  min-height: 40vh;
+  min-width: 53%;
+  border-radius: 10px;
+  border: 2px solid #f2f2f2;
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+main .commend-title{
+  margin-left: 20px;
+  width: 10%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  min-width: 250px;
+  margin-bottom: 3vh;
+ }
+ main .commend-title p{
+  margin-top: auto;
+  margin-left: 10px;
+  color:#025259;
+  font-size: 20px;
+ }
+main .commend-cards{
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  border-radius: 10px;
+ }
+main .card-commend {
+  margin: 10px;
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border-radius: 10px;
+  border: 2px solid #f2f2f2;
+
+} 
+main .commend-name{
+  margin-left: 10px;
+  width: 80%;
+  height: 20%;
+}
+main .commend-inner-info{
+  margin-left: 10px;
+  width: 80%;
+  height: 60%;
+}
+main .commendd-rate{
+  
+  margin-left: 20px;
+  width: 80%;
+  height: 20%;
+}
+main .commend-rate .checked{
+  
+  height: 10vh;
+  color: #F29325;
+}
+main .commend-rate span{
+  margin-left: 10px;
+}
+
+
+main .recommend-products{
+    width: 77%;
+    height: 500px;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border:2px solid #f2f2f2;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-family: 'League Spartan', sans-serif;
+}
+main .recommend-title{
+  margin-left: 50px;
+  color:#025259;
+  font-size: 20px;
+}
+main .recommend-carousel-container{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+main .rec-inner-carousel{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .track{
+  width: 1400px;
+  display: flex; 
+  transition: 0.3s;
+  transform: none;
+}
+main .product-card-container{
+  width: 350px;
+  height: 350px;
+  flex-shrink: 0;
+  padding-right: 30px;
+  box-sizing: border-box;
+  
+}
+main .rec-product{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .rec-product > * {
+  flex: 1;
+ }
+main .rec-product .img{
+  width: 90%;
+  height: 90%;
+  margin-top: 10px;
+  border:2px solid #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: scale-down;
+  overflow: hidden;
+}
+main .img img{
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: scale-down;
+}
+main .rec-product .info{
+  flex-basis: 30px;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .rec-product .info p{
+  padding: 10px;
+}
+main .recommend-controls button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #f2f2f2;
+  background-color: #ffffff;
+  color: #323232 ;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+main .recommend-controls button:hover{
+  background-color: #F29325;
+  color: #ffffff ;
+}
+ main .nextNum{
+  right: -25px;
+
+ }
+ main .nextNum{
+  right: -25px;
+  
+ }
+ main .prevNum{
+  left: -25px;
+ }
+ footer iframe:focus {
+  outline: none;
+}
+
+footer iframe[seamless] {
+  border: none;
 }
