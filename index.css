@@ -190,6 +190,12 @@ main{
 
  } 
 
+
+.main-header-card-title a{
+    text-decoration: none;
+}
+
+
 .button-header-class button{
     height: 30px;
     width: 30px;
