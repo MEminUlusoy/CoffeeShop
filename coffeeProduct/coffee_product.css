@@ -627,10 +627,3 @@ main .recommend-controls button:hover{
  main .prevNum{
   left: -25px;
  }
- footer iframe:focus {
-  outline: none;
-}
-
-footer iframe[seamless] {
-  border: none;
-}

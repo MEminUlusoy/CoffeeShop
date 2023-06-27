@@ -88,7 +88,6 @@ function price(indid){
     return priceP.innerHTML =  costL.toFixed(2) + " TL";
   } 
 
-var article = document.getElementById('article');
 function gizleGoster(article) {
     var secilenID = document.getElementById(article);
     if (secilenID.style.display == "none") {
